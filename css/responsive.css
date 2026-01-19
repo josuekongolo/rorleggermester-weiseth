@@ -1,0 +1,610 @@
+/* ================================================
+   RØRLEGGERMESTER WEISETH - Responsive Styles
+   Mobile-First Responsive Design
+   ================================================ */
+
+/* ------------------------------------------------
+   Large Desktop (1200px+)
+   ------------------------------------------------ */
+@media (min-width: 1200px) {
+    .container {
+        padding: 0 var(--space-xl);
+    }
+}
+
+/* ------------------------------------------------
+   Desktop (1024px - 1199px)
+   ------------------------------------------------ */
+@media (max-width: 1199px) {
+    :root {
+        --text-4xl: 2.25rem;
+        --text-3xl: 1.75rem;
+    }
+
+    .hero-inner {
+        gap: var(--space-2xl);
+    }
+
+    .services-grid {
+        gap: var(--space-lg);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+        gap: var(--space-xl);
+    }
+
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ------------------------------------------------
+   Tablet (768px - 1023px)
+   ------------------------------------------------ */
+@media (max-width: 1023px) {
+    :root {
+        --text-4xl: 2rem;
+        --text-3xl: 1.5rem;
+        --text-2xl: 1.25rem;
+        --header-height: 70px;
+    }
+
+    /* Navigation */
+    .nav-menu {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--color-white);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: var(--space-xl);
+        gap: var(--space-lg);
+        transform: translateX(100%);
+        transition: transform var(--transition-base);
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        transform: translateX(0);
+    }
+
+    .nav-link {
+        font-size: var(--text-lg);
+        padding: var(--space-md) 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid var(--color-gray-200);
+    }
+
+    .nav-cta {
+        width: 100%;
+        justify-content: center;
+        margin-top: var(--space-md);
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: auto;
+        padding-top: calc(var(--header-height) + var(--space-2xl));
+        padding-bottom: var(--space-2xl);
+    }
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-badge {
+        justify-content: center;
+    }
+
+    .hero-features {
+        justify-content: center;
+    }
+
+    .hero-cta {
+        justify-content: center;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Why Us */
+    .why-us-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .why-us-image {
+        order: -1;
+    }
+
+    .why-us-image img {
+        max-height: 350px;
+        object-fit: cover;
+    }
+
+    /* Master Section */
+    .master-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .master-image {
+        order: -1;
+    }
+
+    .master-badge-visual {
+        width: 250px;
+        height: 250px;
+    }
+
+    .master-feature {
+        justify-content: center;
+    }
+
+    /* Service Area */
+    .service-area-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .area-map {
+        height: 300px;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-xl);
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+
+    /* Service Detail */
+    .service-detail-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .service-detail:nth-child(even) .service-detail-grid {
+        direction: ltr;
+    }
+
+    .service-detail-image {
+        order: -1;
+    }
+
+    .service-detail-image img {
+        height: 280px;
+    }
+
+    /* About Page */
+    .about-intro-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .about-image {
+        order: -1;
+    }
+
+    .qualifications-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    /* Projects */
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+}
+
+/* ------------------------------------------------
+   Mobile Large (576px - 767px)
+   ------------------------------------------------ */
+@media (max-width: 767px) {
+    :root {
+        --text-4xl: 1.75rem;
+        --text-3xl: 1.375rem;
+        --text-2xl: 1.125rem;
+        --text-xl: 1rem;
+        --space-4xl: 4rem;
+        --space-3xl: 3rem;
+    }
+
+    .container {
+        padding: 0 var(--space-md);
+    }
+
+    .section {
+        padding: var(--space-3xl) 0;
+    }
+
+    /* Quick Contact */
+    .quick-contact-inner {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: var(--space-lg);
+    }
+
+    /* CTA */
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Benefits */
+    .benefits-list {
+        gap: var(--space-lg);
+    }
+
+    /* Pricing */
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-card {
+        padding: var(--space-lg);
+    }
+
+    /* Values */
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Area List */
+    .area-list {
+        grid-template-columns: 1fr;
+    }
+
+    /* Projects */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Form */
+    .contact-form-wrapper {
+        padding: var(--space-lg);
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group {
+        grid-column: 1;
+    }
+
+    .checkbox-group {
+        flex-direction: row;
+    }
+
+    /* Page Header */
+    .page-header {
+        padding: calc(var(--header-height) + var(--space-2xl)) 0 var(--space-2xl);
+    }
+}
+
+/* ------------------------------------------------
+   Mobile Small (up to 575px)
+   ------------------------------------------------ */
+@media (max-width: 575px) {
+    :root {
+        --text-4xl: 1.5rem;
+        --text-3xl: 1.25rem;
+        --header-height: 65px;
+    }
+
+    /* Logo */
+    .logo-text {
+        display: none;
+    }
+
+    .logo-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    /* Hero */
+    .hero {
+        padding-top: calc(var(--header-height) + var(--space-xl));
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: var(--text-base);
+    }
+
+    .hero-features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+    }
+
+    /* Section Headers */
+    .section-header {
+        margin-bottom: var(--space-2xl);
+    }
+
+    /* Service Card */
+    .service-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .service-icon svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    /* Master Badge */
+    .master-badge-visual {
+        width: 200px;
+        height: 200px;
+    }
+
+    .master-badge-visual svg {
+        width: 45px;
+        height: 45px;
+    }
+
+    .master-badge-visual strong {
+        font-size: var(--text-base);
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .footer-brand {
+        text-align: center;
+    }
+
+    .footer-brand .logo {
+        justify-content: center;
+    }
+
+    /* Contact Details */
+    .contact-detail {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-detail-icon {
+        margin: 0 auto;
+    }
+
+    /* Emergency Notice */
+    .emergency-notice {
+        text-align: center;
+        padding: var(--space-lg);
+    }
+
+    .emergency-notice .phone-link {
+        padding: var(--space-md) var(--space-lg);
+        font-size: var(--text-base);
+    }
+
+    /* Buttons */
+    .btn {
+        padding: var(--space-md) var(--space-lg);
+    }
+
+    .btn-lg {
+        padding: var(--space-md) var(--space-xl);
+        font-size: var(--text-base);
+    }
+}
+
+/* ------------------------------------------------
+   Touch Device Optimizations
+   ------------------------------------------------ */
+@media (hover: none) {
+    .service-card:hover,
+    .project-card:hover {
+        transform: none;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .btn:hover {
+        transform: none;
+    }
+}
+
+/* ------------------------------------------------
+   Reduced Motion
+   ------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ------------------------------------------------
+   High Contrast Mode
+   ------------------------------------------------ */
+@media (prefers-contrast: high) {
+    :root {
+        --color-primary: #0D1F30;
+        --color-secondary: #8B4513;
+        --color-text-light: #374151;
+    }
+
+    .btn {
+        border-width: 3px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        border-width: 2px;
+    }
+}
+
+/* ------------------------------------------------
+   Print Styles
+   ------------------------------------------------ */
+@media print {
+    .header,
+    .nav-toggle,
+    .hero-image,
+    .cta-section,
+    .footer,
+    .btn,
+    .area-map,
+    .map-wrapper {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+        background: #fff;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 20pt 0;
+        background: none;
+        color: #000;
+    }
+
+    .hero h1,
+    .hero-subtitle {
+        color: #000;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #000;
+        page-break-after: avoid;
+    }
+
+    .section {
+        padding: 20pt 0;
+        page-break-inside: avoid;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    a[href^="tel:"]::after {
+        content: " (" attr(href) ")";
+    }
+}
+
+/* ------------------------------------------------
+   Landscape Mobile
+   ------------------------------------------------ */
+@media (max-width: 767px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: calc(var(--header-height) + var(--space-lg)) 0 var(--space-xl);
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+        margin-bottom: var(--space-sm);
+    }
+
+    .hero-features {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .master-badge-visual {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* ------------------------------------------------
+   Safe Area (Notch devices)
+   ------------------------------------------------ */
+@supports (padding: max(0px)) {
+    .header {
+        padding-left: max(var(--space-lg), env(safe-area-inset-left));
+        padding-right: max(var(--space-lg), env(safe-area-inset-right));
+    }
+
+    .container {
+        padding-left: max(var(--space-md), env(safe-area-inset-left));
+        padding-right: max(var(--space-md), env(safe-area-inset-right));
+    }
+
+    .footer {
+        padding-bottom: max(var(--space-xl), env(safe-area-inset-bottom));
+    }
+}
